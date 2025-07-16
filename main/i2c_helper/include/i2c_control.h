@@ -17,6 +17,7 @@ extern "C" {
 #include "driver/i2c_master.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/semphr.h"
 
 
 // --- Macros and Constants ---
