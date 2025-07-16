@@ -1,0 +1,2 @@
+source /home/db/esp/feed_control_esp/build/bootloader/gdbinit/symbols
+source /home/db/esp/feed_control_esp/build/bootloader/gdbinit/connect

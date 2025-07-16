@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/db/esp/feed_control_esp/build/CMakeFiles/bootloader
+/home/db/esp/feed_control_esp/build/CMakeFiles/bootloader.rule
+/home/db/esp/feed_control_esp/build/CMakeFiles/bootloader-complete.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/db/esp/feed_control_esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
