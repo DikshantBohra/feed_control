@@ -18,11 +18,15 @@ static uint8_t s_led_state = 0;
 #define OTA_URL_SIZE 256
 
 
+
+
 static void blink_led(void)
 {
     /* Set the GPIO level according to the state (LOW or HIGH)*/
     gpio_set_level(BLINK_GPIO, s_led_state);
 }
+
+
 
 static void configure_led(void)
 {
@@ -31,6 +35,11 @@ static void configure_led(void)
     /* Set the GPIO as a push/pull output */
     gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
 }
+
+
+
+
+
 void app_main(void)
 {
     ESP_LOGI(TAG_1, "MAIN_STARTED");
@@ -71,29 +80,16 @@ void app_main(void)
     }
 #endif
 
-#if CONFIG_EXAMPLE_CONNECT_WIFI
-#if !CONFIG_BT_ENABLED
-    /* Ensure to disable any WiFi power save mode, this allows best throughput
-     * and hence timings for overall OTA operation.
-     */
-    esp_wifi_set_ps(WIFI_PS_NONE);
-#else
-    /* WIFI_PS_MIN_MODEM is the default mode for WiFi Power saving. When both
-     * WiFi and Bluetooth are running, WiFI modem has to go down, hence we
-     * need WIFI_PS_MIN_MODEM. And as WiFi modem goes down, OTA download time
-     * increases.
-     */
-    esp_wifi_set_ps(WIFI_PS_MIN_MODEM);
-#endif // CONFIG_BT_ENABLED
-#endif // CONFIG_EXAMPLE_CONNECT_WIFI
+/* Ensure to disable any WiFi power save mode, this allows best throughput
+ * and hence timings for overall OTA operation.
+ */
+esp_wifi_set_ps(WIFI_PS_NONE);
 
-#if CONFIG_BT_CONTROLLER_ENABLED && (CONFIG_BT_BLE_ENABLED || CONFIG_BT_NIMBLE_ENABLED)
-    ESP_ERROR_CHECK(esp_ble_helper_init());
-#endif
 
     // xTaskCreate(&advanced_ota_example_task, "advanced_ota_example_task", 1024 * 8, NULL, 5, NULL);
 advanced_ota_example_task(NULL);
 configure_led();
+
 
     while (1) {
         // ESP_LOGI(TAG, "Turning the LED %s!", s_led_state == true ? "ON" : "OFF");

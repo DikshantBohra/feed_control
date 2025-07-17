@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "feed_control_esp",
-    "project_version":    "1",
+    "project_version":    "8236535-dirty",
     "project_path":       "/home/db/esp/feed_control_esp",
     "idf_path":           "/home/db/esp/v5.4.1/esp-idf",
     "build_dir":          "/home/db/esp/feed_control_esp/build",
@@ -1195,8 +1195,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "file": "/home/db/esp/feed_control_esp/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/db/esp/feed_control_esp/main/main.c", "/home/db/esp/feed_control_esp/main/ble_helper/bluedroid_gatts.c", "/home/db/esp/feed_control_esp/main/ble_helper/nimble_gatts.c", "/home/db/esp/feed_control_esp/main/ble_helper/ble_api.c", "/home/db/esp/feed_control_esp/main/OTA_helper/OTA_CONFIG.c", "/home/db/esp/feed_control_esp/main/feed_control_helper/feed_control.c", "/home/db/esp/feed_control_esp/main/RS_485_helper/rs_485.c", "/home/db/esp/feed_control_esp/build/ca_cert.pem.S" ],
-            "include_dirs": [ ".", "./ble_helper/include/", "./OTA_helper/include/", "./RS_485_helper/include/", "./feed_control_helper/include/" ]
+            "sources": [ "/home/db/esp/feed_control_esp/main/main.c", "/home/db/esp/feed_control_esp/main/OTA_helper/OTA_CONFIG.c", "/home/db/esp/feed_control_esp/main/feed_control_helper/feed_control.c", "/home/db/esp/feed_control_esp/main/RS_485_helper/rs_485.c", "/home/db/esp/feed_control_esp/main/i2c_helper/i2c_control.c", "/home/db/esp/feed_control_esp/build/ca_cert.pem.S" ],
+            "include_dirs": [ ".", "./OTA_helper/include/", "./RS_485_helper/include/", "./feed_control_helper/include/", "./i2c_helper/include/" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2860,7 +2860,7 @@
             "priv_reqs": [ "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
-            "include_dirs": [ ".", "./ble_helper/include/", "./OTA_helper/include/", "./RS_485_helper/include/", "./feed_control_helper/include/" ]
+            "include_dirs": [ ".", "./OTA_helper/include/", "./RS_485_helper/include/", "./feed_control_helper/include/", "./i2c_helper/include/" ]
         },
         "protocol_examples_common": {
             "alias": "idf::protocol_examples_common",
